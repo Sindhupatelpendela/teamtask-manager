@@ -417,65 +417,65 @@ a {
    LEGIBILITY & HIGH CONTRAST ACCESSIBILITY OVERRIDES
    ========================================================================== */
 
-/* Enlarge Base Typography across entire app */
+/* Enlarge Base Typography across entire app to super-sized levels */
 body {
-  font-size: 18px !important;
+  font-size: 22px !important;
 }
 
 /* Sidebar Container layout resizing */
 .sidebar-container {
-  width: 300px !important;
-  padding: 30px 20px !important;
+  width: 340px !important;
+  padding: 30px 24px !important;
 }
 
 /* Sidebar Header text and spacing */
 .sidebar-container h1 {
-  font-size: 1.6rem !important;
-  font-weight: 900 !important;
+  font-size: 2.1rem !important;
+  font-weight: 950 !important;
   color: #ffffff !important;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
 
 /* Logo Sub-label spacing and clarity */
 .sidebar-container span[style*="letterSpacing"] {
-  font-size: 0.85rem !important;
-  font-weight: 750 !important;
+  font-size: 1.0rem !important;
+  font-weight: 800 !important;
   color: var(--accent-cyan) !important;
   letter-spacing: 0.08em !important;
 }
 
 /* Workspace Navigation Label text */
 .sidebar-container span[style*="textTransform"] {
-  font-size: 0.95rem !important;
-  font-weight: 750 !important;
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
   color: var(--accent-cyan) !important;
   letter-spacing: 0.08em !important;
-  margin-top: 10px !important;
+  margin-top: 12px !important;
 }
 
 /* Workspace List Item buttons inside sidebar */
 .sidebar-container button.glass-panel {
-  padding: 14px 18px !important;
-  margin-top: 8px !important;
+  padding: 16px 20px !important;
+  margin-top: 10px !important;
   border-radius: var(--border-radius-sm) !important;
 }
 
 .sidebar-container button.glass-panel span {
-  font-size: 1.15rem !important; /* Significantly larger workspace names */
-  font-weight: 700 !important;
+  font-size: 1.3rem !important; /* Extremely prominent workspace names */
+  font-weight: 800 !important;
   color: #ffffff !important;
 }
 
 /* User Profile card text & badge inside sidebar */
 .sidebar-container div[style*="fontSize: '0.85rem'"] {
-  font-size: 1.1rem !important;
-  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
   color: #ffffff !important;
 }
 
 .sidebar-container .badge {
-  font-size: 0.85rem !important;
-  padding: 4px 8px !important;
+  font-size: 0.95rem !important;
+  padding: 6px 12px !important;
   font-weight: 800 !important;
 }
 
@@ -493,56 +493,56 @@ body {
 
 /* Navigation button (Dashboard button) inside sidebar */
 .sidebar-container button.btn {
-  padding: 14px 18px !important;
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
+  padding: 16px 20px !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
 }
 
 .sidebar-container button.btn span {
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
 }
 
 /* Main Workspace layout padding and spacing */
 .main-content {
-  margin-left: 300px !important;
-  padding: 40px !important;
+  margin-left: 340px !important;
+  padding: 45px !important;
 }
 
 @media (max-width: 991px) {
   .main-content {
     margin-left: 0 !important;
     padding: 24px !important;
-    padding-top: 90px !important;
+    padding-top: 100px !important;
   }
 }
 
 /* Dashboard Welcoming Titles visibility */
 .main-content h2.gradient-text-cyan {
-  font-size: 2.6rem !important;
-  font-weight: 850 !important;
+  font-size: 3.2rem !important;
+  font-weight: 900 !important;
   text-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
 }
 
 .main-content p[style*="color: 'var(--text-secondary)'"] {
-  font-size: 1.25rem !important;
-  color: #ffffff !important; /* White for max readability */
-  font-weight: 500 !important;
+  font-size: 1.45rem !important;
+  color: #ffffff !important; /* Pure white for max readability */
+  font-weight: 600 !important;
   opacity: 0.95;
 }
 
 /* KPI Card upgrades - bold numbers, clear labels */
 .glass-panel span[style*="fontSize: '0.9rem'"],
 .glass-panel span {
-  font-size: 1.15rem !important; /* Enlarge labels */
-  font-weight: 700 !important;
+  font-size: 1.3rem !important; /* Enlarge labels */
+  font-weight: 800 !important;
   color: #f8fafc !important; /* Bright silver white */
 }
 
 .glass-panel h3 {
-  font-size: 3.4rem !important; /* Huge prominent numbers */
-  font-weight: 900 !important;
-  margin-top: 6px !important;
+  font-size: 4.4rem !important; /* Massive numbers */
+  font-weight: 950 !important;
+  margin-top: 8px !important;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.15) !important;
 }
 
@@ -566,51 +566,51 @@ body {
 
 /* Milestone lists and sub-panels readability */
 .glass-panel h4 {
-  font-size: 1.3rem !important; /* Large bold card titles */
+  font-size: 1.5rem !important; /* Large bold card titles */
   font-weight: 800 !important;
   color: #ffffff !important;
 }
 
 .glass-panel p[style*="color: 'var(--text-secondary)'"] {
-  font-size: 1.1rem !important;
+  font-size: 1.25rem !important;
   color: #e2e8f0 !important;
   line-height: 1.6 !important;
 }
 
 /* Target dates & details on milestones */
 .glass-panel div[style*="fontSize: '0.8rem'"] {
-  font-size: 1rem !important;
-  font-weight: 600 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
   color: #cbd5e1 !important;
 }
 
 .glass-panel div[style*="fontSize: '0.9rem'"] {
-  font-size: 1.2rem !important;
-  font-weight: 750 !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
   color: var(--accent-cyan) !important;
 }
 
 /* Custom Badge text sizes */
 .badge {
-  font-size: 0.85rem !important;
+  font-size: 0.95rem !important;
   font-weight: 800 !important;
-  padding: 5px 12px !important;
+  padding: 6px 14px !important;
 }
 
 /* Launch New Project Form Input upgrades */
 .form-label {
-  font-size: 1.15rem !important;
-  font-weight: 750 !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
   color: var(--accent-cyan) !important;
   letter-spacing: 0.05em !important;
-  margin-bottom: 6px !important;
+  margin-bottom: 8px !important;
 }
 
 .form-input {
-  font-size: 1.25rem !important;
+  font-size: 1.4rem !important;
   font-weight: 600 !important;
   color: #ffffff !important;
-  padding: 16px 20px !important;
+  padding: 18px 22px !important;
   background: rgba(4, 7, 16, 0.85) !important;
   border: 1px solid rgba(255, 255, 255, 0.28) !important;
   border-radius: var(--border-radius-sm) !important;
@@ -627,62 +627,62 @@ body {
 
 /* Initialize Workspace / Submit buttons */
 button.btn-primary {
-  padding: 16px 28px !important;
-  font-size: 1.25rem !important;
+  padding: 18px 32px !important;
+  font-size: 1.4rem !important;
   font-weight: 800 !important;
 }
 
 /* Work Completion progress gauge text */
 span[style*="fontSize: '1.8rem'"] {
-  font-size: 2.3rem !important;
-  font-weight: 900 !important;
+  font-size: 2.8rem !important;
+  font-weight: 950 !important;
   color: #ffffff !important;
 }
 
 span[style*="fontSize: '0.75rem'"] {
-  font-size: 0.95rem !important;
-  font-weight: 750 !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
   color: var(--text-secondary) !important;
   letter-spacing: 0.05em !important;
 }
 
 div[style*="fontSize: '0.8rem'"] {
-  font-size: 1.05rem !important;
-  font-weight: 600 !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
   color: #cbd5e1 !important;
 }
 
 div[style*="fontSize: '1.2rem'"] {
-  font-size: 1.45rem !important;
+  font-size: 1.7rem !important;
   font-weight: 800 !important;
 }
 
 /* Kanban Board Column Headers & Elements */
 .kanban-header span {
-  font-size: 1.35rem !important;
-  font-weight: 800 !important;
+  font-size: 1.55rem !important;
+  font-weight: 900 !important;
   color: #ffffff !important;
 }
 
 .kanban-header .badge {
-  font-size: 1rem !important;
-  padding: 4px 12px !important;
+  font-size: 1.15rem !important;
+  padding: 6px 14px !important;
 }
 
 .kanban-column {
-  padding: 20px !important;
+  padding: 24px !important;
 }
 
 /* Kanban Cards Text Sizes */
 .kanban-card-list .glass-panel h4 {
-  font-size: 1.2rem !important;
-  font-weight: 800 !important;
+  font-size: 1.4rem !important;
+  font-weight: 850 !important;
   color: #ffffff !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 10px !important;
 }
 
 .kanban-card-list .glass-panel p {
-  font-size: 1.05rem !important;
+  font-size: 1.25rem !important;
   color: #cbd5e1 !important;
   white-space: normal !important; /* Allow wrapping so they can read full description */
   display: -webkit-box !important;
@@ -692,62 +692,62 @@ div[style*="fontSize: '1.2rem'"] {
 }
 
 .kanban-card-list .glass-panel span {
-  font-size: 0.95rem !important;
-  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
 }
 
 /* Overdue Deliverables Warning box inside Dashboard */
 .glass-panel h4[style*="color: '#fca5a5'"] {
-  font-size: 1.25rem !important;
-  font-weight: 800 !important;
+  font-size: 1.45rem !important;
+  font-weight: 850 !important;
   color: #fecaca !important;
 }
 
 .glass-panel p[style*="fontSize: '0.85rem'"] {
-  font-size: 1.1rem !important;
+  font-size: 1.25rem !important;
   color: #fbcfe8 !important;
 }
 
 /* Login/Register screen text sizes */
 .glass-panel h1[style*="fontSize: '2rem'"] {
-  font-size: 2.8rem !important;
-  font-weight: 900 !important;
+  font-size: 3.5rem !important;
+  font-weight: 950 !important;
   letter-spacing: -0.02em !important;
 }
 
 .glass-panel p[style*="fontSize: '0.9rem'"] {
-  font-size: 1.2rem !important;
+  font-size: 1.45rem !important;
   color: var(--text-secondary) !important;
 }
 
 /* Developer demo credentials header & buttons */
 div[style*="fontSize: '0.8rem'"] {
-  font-size: 1.05rem !important;
-  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
 }
 
 button[style*="fontSize: '0.75rem'"] {
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  padding: 10px 14px !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  padding: 12px 18px !important;
 }
 
 /* Modals inputs & dropdowns enlargement */
 .modal-content h3 {
-  font-size: 1.7rem !important;
-  font-weight: 850 !important;
+  font-size: 2.1rem !important;
+  font-weight: 900 !important;
   color: #ffffff !important;
 }
 
 .modal-content select.form-input {
-  font-size: 1.25rem !important;
+  font-size: 1.4rem !important;
   font-weight: 600 !important;
 }
 
 .modal-content option {
   background: var(--bg-tertiary) !important;
   color: #ffffff !important;
-  font-size: 1.2rem !important;
+  font-size: 1.3rem !important;
 }
 
 /* Custom Scrollbars thumb visibility enhancement */
