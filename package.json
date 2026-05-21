@@ -1,0 +1,17 @@
+{
+  "name": "teamtask-manager-root",
+  "version": "1.0.0",
+  "description": "Team Task Manager - Full-Stack App",
+  "main": "server/index.js",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run install-all && npm run build --prefix client",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
