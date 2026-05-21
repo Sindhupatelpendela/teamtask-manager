@@ -135,7 +135,7 @@ const WorkspaceLayout = () => {
 
       {/* Glass Sidebar */}
       <aside className="sidebar-container" style={{
-        width: '260px',
+        width: '420px',
         background: 'var(--bg-secondary)',
         borderRight: '1px solid var(--glass-border)',
         height: '100vh',
@@ -144,59 +144,62 @@ const WorkspaceLayout = () => {
         left: 0,
         display: 'flex',
         flexDirection: 'column',
-        padding: '24px 20px',
+        padding: '30px 24px',
         justifyContent: 'space-between',
         transition: 'var(--transition-smooth)'
       }}>
         
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', overflowY: 'auto', flex: 1, paddingRight: '2px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', overflowY: 'auto', flex: 1, paddingRight: '4px' }}>
           
           {/* Logo / Brand Header */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              width: '38px',
-              height: '38px',
-              borderRadius: '10px',
-              background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))'
+              width: '56px',
+              height: '56px',
+              borderRadius: '14px',
+              background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))',
+              boxShadow: '0 4px 16px rgba(0, 242, 254, 0.25)',
+              flexShrink: 0
             }}>
-              <Layers size={18} color="#070a13" strokeWidth={2.5} />
+              <Layers size={28} color="#070a13" strokeWidth={2.5} />
             </div>
             <div>
-              <h1 style={{ fontSize: '1.25rem', fontWeight: 800, fontFamily: 'var(--font-display)' }}>TeamTask</h1>
-              <span style={{ fontSize: '0.65rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>COLLABORATION</span>
+              <h1 style={{ fontSize: '2.4rem', fontWeight: 900, fontFamily: 'var(--font-display)', lineHeight: '1.1', color: '#ffffff' }}>TeamTask</h1>
+              <span style={{ fontSize: '0.9rem', color: 'var(--accent-cyan)', textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: 800 }}>COLLABORATION</span>
             </div>
           </div>
 
           {/* User Profile Card */}
           <div className="glass-panel" style={{
-            padding: '12px 14px',
+            padding: '16px 20px',
             display: 'flex',
             alignItems: 'center',
-            gap: '12px',
+            gap: '16px',
             background: 'rgba(255,255,255,0.01)',
             border: '1px solid rgba(255,255,255,0.04)'
           }}>
             <div style={{
-              width: '36px',
-              height: '36px',
+              width: '48px',
+              height: '48px',
               borderRadius: '50%',
               backgroundColor: 'var(--accent-purple)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               fontFamily: 'var(--font-display)',
-              fontWeight: 700,
-              fontSize: '0.85rem'
+              fontWeight: 800,
+              fontSize: '1.25rem',
+              flexShrink: 0
             }}>
               {getInitials(user?.name)}
             </div>
-            <div style={{ overflow: 'hidden' }}>
-              <div style={{ fontSize: '0.85rem', fontWeight: 600, textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>{user?.name}</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '2px' }}>
-                <span className={`badge ${user?.role === 'Admin' ? 'badge-progress' : 'badge-todo'}`} style={{ fontSize: '0.55rem', padding: '1px 6px' }}>
+            <div style={{ overflow: 'hidden', flex: 1 }}>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', color: '#ffffff' }}>{user?.name}</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '4px' }}>
+                <span className={`badge ${user?.role === 'Admin' ? 'badge-progress' : 'badge-todo'}`} style={{ fontSize: '0.8rem', padding: '3px 10px', fontWeight: 800 }}>
                   {user?.role}
                 </span>
               </div>
@@ -204,13 +207,13 @@ const WorkspaceLayout = () => {
           </div>
 
           {/* Navigation Links */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <button
               onClick={handleNavigateToDashboard}
               className={`btn ${activeView === 'dashboard' ? 'btn-primary' : 'btn-secondary'}`}
-              style={{ justifyContent: 'flex-start', padding: '10px 14px' }}
+              style={{ justifyContent: 'flex-start', padding: '16px 20px', fontSize: '1.35rem', fontWeight: 800 }}
             >
-              <LayoutDashboard size={16} />
+              <LayoutDashboard size={20} />
               <span>Dashboard</span>
             </button>
           </div>
@@ -222,15 +225,15 @@ const WorkspaceLayout = () => {
               justifyContent: 'space-between',
               alignItems: 'center',
               padding: '0 8px',
-              marginBottom: '10px'
+              marginBottom: '12px'
             }}>
               <span style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: '0.75rem',
-                fontWeight: 600,
-                color: 'var(--text-muted)',
+                fontSize: '1.1rem',
+                fontWeight: 800,
+                color: 'var(--accent-cyan)',
                 textTransform: 'uppercase',
-                letterSpacing: '0.05em'
+                letterSpacing: '0.08em'
               }}>My Workspaces</span>
               
               <button 
@@ -241,17 +244,18 @@ const WorkspaceLayout = () => {
                   color: 'var(--accent-cyan)',
                   cursor: 'pointer',
                   display: 'flex',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  padding: '4px'
                 }}
                 title="Create project"
               >
-                <FolderPlus size={14} />
+                <FolderPlus size={18} />
               </button>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {projects.length === 0 ? (
-                <div style={{ padding: '10px 8px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                <div style={{ padding: '12px 8px', fontSize: '1.0rem', color: 'var(--text-muted)' }}>
                   No workspaces joined.
                 </div>
               ) : (
@@ -263,24 +267,37 @@ const WorkspaceLayout = () => {
                       onClick={() => handleNavigateToProject(p.id)}
                       className="glass-panel"
                       style={{
-                        padding: '10px 14px',
+                        padding: '16px 20px',
                         textAlign: 'left',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        fontSize: '0.85rem',
-                        fontWeight: isActive ? 600 : 400,
+                        fontSize: '1.3rem',
+                        fontWeight: isActive ? 800 : 600,
                         border: isActive ? '1px solid var(--accent-cyan)' : '1px solid transparent',
                         background: isActive ? 'rgba(0, 242, 254, 0.05)' : 'rgba(255, 255, 255, 0.01)',
                         cursor: 'pointer',
                         width: '100%',
-                        transition: 'var(--transition-smooth)'
+                        transition: 'var(--transition-smooth)',
+                        marginTop: '10px'
                       }}
                     >
-                      <span style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: '170px' }}>
+                      <span style={{ 
+                        textOverflow: 'ellipsis', 
+                        overflow: 'hidden', 
+                        whiteSpace: 'normal', 
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        wordBreak: 'break-word',
+                        lineHeight: '1.3',
+                        flex: 1,
+                        marginRight: '8px',
+                        color: '#ffffff'
+                      }}>
                         {p.name}
                       </span>
-                      {isActive && <ChevronRight size={12} color="var(--accent-cyan)" />}
+                      {isActive && <ChevronRight size={16} color="var(--accent-cyan)" style={{ flexShrink: 0 }} />}
                     </button>
                   );
                 })
