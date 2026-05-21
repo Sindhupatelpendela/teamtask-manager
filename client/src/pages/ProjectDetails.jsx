@@ -258,7 +258,7 @@ const ProjectDetails = ({ projectId, onNavigateToDashboard, onDeleteSuccess }) =
     }
   };
 
-  const openTaskModal = (task = null) => {
+  const openTaskModal = (task = null, defaultStatus = 'Todo') => {
     if (task) {
       setSelectedTask(task);
       setTaskTitle(task.title);
@@ -274,7 +274,7 @@ const ProjectDetails = ({ projectId, onNavigateToDashboard, onDeleteSuccess }) =
       setTaskAssignee('');
       setTaskDueDate('');
       setTaskPriority('Medium');
-      setTaskStatus('Todo');
+      setTaskStatus(defaultStatus);
     }
     setShowTaskModal(true);
   };
@@ -372,6 +372,30 @@ const ProjectDetails = ({ projectId, onNavigateToDashboard, onDeleteSuccess }) =
           </div>
 
           <div className="kanban-card-list">
+            <button 
+              onClick={() => openTaskModal(null, 'Todo')} 
+              style={{
+                width: '100%',
+                padding: '16px 20px',
+                background: 'rgba(255, 255, 255, 0.02)',
+                border: '2px dashed rgba(245, 158, 11, 0.4)',
+                borderRadius: 'var(--border-radius-sm)',
+                color: '#fbbf24',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                cursor: 'pointer',
+                fontSize: '1.15rem',
+                fontWeight: 800,
+                transition: 'var(--transition-smooth)',
+                marginBottom: '12px'
+              }}
+              className="glass-panel-interactive"
+            >
+              <Plus size={18} color="#fbbf24" />
+              <span>+ Add Task to Backlog</span>
+            </button>
             {todoTasks.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '40px 0', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
                 No pending backlog tasks.
@@ -442,6 +466,30 @@ const ProjectDetails = ({ projectId, onNavigateToDashboard, onDeleteSuccess }) =
           </div>
 
           <div className="kanban-card-list">
+            <button 
+              onClick={() => openTaskModal(null, 'In Progress')} 
+              style={{
+                width: '100%',
+                padding: '16px 20px',
+                background: 'rgba(255, 255, 255, 0.02)',
+                border: '2px dashed rgba(0, 242, 254, 0.4)',
+                borderRadius: 'var(--border-radius-sm)',
+                color: 'var(--accent-cyan)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                cursor: 'pointer',
+                fontSize: '1.15rem',
+                fontWeight: 800,
+                transition: 'var(--transition-smooth)',
+                marginBottom: '12px'
+              }}
+              className="glass-panel-interactive"
+            >
+              <Plus size={18} color="var(--accent-cyan)" />
+              <span>+ Add Task to Active Sprint</span>
+            </button>
             {progressTasks.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '40px 0', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
                 No active task executions.
@@ -520,6 +568,30 @@ const ProjectDetails = ({ projectId, onNavigateToDashboard, onDeleteSuccess }) =
           </div>
 
           <div className="kanban-card-list">
+            <button 
+              onClick={() => openTaskModal(null, 'Completed')} 
+              style={{
+                width: '100%',
+                padding: '16px 20px',
+                background: 'rgba(255, 255, 255, 0.02)',
+                border: '2px dashed rgba(16, 185, 129, 0.4)',
+                borderRadius: 'var(--border-radius-sm)',
+                color: '#34d399',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                cursor: 'pointer',
+                fontSize: '1.15rem',
+                fontWeight: 800,
+                transition: 'var(--transition-smooth)',
+                marginBottom: '12px'
+              }}
+              className="glass-panel-interactive"
+            >
+              <Plus size={18} color="#34d399" />
+              <span>+ Add Task to Released / Done</span>
+            </button>
             {completedTasks.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '40px 0', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
                 No completed deliverables.
