@@ -7,35 +7,35 @@
   --bg-secondary: #0d1222;
   --bg-tertiary: #13192f;
   
-  --glass-bg: rgba(13, 18, 34, 0.55);
-  --glass-bg-hover: rgba(19, 25, 47, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.06);
-  --glass-border-hover: rgba(255, 255, 255, 0.12);
-  --glass-shadow: rgba(0, 0, 0, 0.4);
+  --glass-bg: rgba(13, 18, 34, 0.75); /* Increased opacity for higher text contrast */
+  --glass-bg-hover: rgba(19, 25, 47, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.12); /* Brighter border */
+  --glass-border-hover: rgba(255, 255, 255, 0.22);
+  --glass-shadow: rgba(0, 0, 0, 0.5);
 
   --accent-cyan: #00f2fe;
-  --accent-cyan-glow: rgba(0, 242, 254, 0.35);
-  --accent-purple: #8a2be2;
-  --accent-purple-glow: rgba(138, 43, 226, 0.35);
+  --accent-cyan-glow: rgba(0, 242, 254, 0.45);
+  --accent-purple: #9d4edd; /* Slightly brighter purple for readability */
+  --accent-purple-glow: rgba(157, 78, 221, 0.45);
   --accent-green: #10b981;
-  --accent-green-glow: rgba(16, 185, 129, 0.25);
-  --accent-orange: #f59e0b;
-  --accent-orange-glow: rgba(245, 158, 11, 0.25);
-  --accent-red: #ef4444;
-  --accent-red-glow: rgba(239, 68, 68, 0.25);
+  --accent-green-glow: rgba(16, 185, 129, 0.35);
+  --accent-orange: #fbbf24; /* Brighter gold */
+  --accent-orange-glow: rgba(251, 191, 36, 0.35);
+  --accent-red: #f87171; /* Brighter pastel red */
+  --accent-red-glow: rgba(248, 113, 113, 0.35);
 
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #ffffff;       /* Pure white */
+  --text-secondary: #e2e8f0;     /* Light slate (High contrast grey) */
+  --text-muted: #cbd5e1;         /* Brighter muted text (Old text-secondary) */
   
   --font-display: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  --border-radius-sm: 8px;
-  --border-radius-md: 14px;
-  --border-radius-lg: 20px;
+  --border-radius-sm: 10px;      /* Slightly larger curves */
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
 }
 
 /* Base Reset & Core Styles */
@@ -50,21 +50,22 @@
 body {
   background-color: var(--bg-primary);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(138, 43, 226, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(0, 242, 254, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(157, 78, 221, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 242, 254, 0.12) 0px, transparent 50%),
     radial-gradient(at 50% 50%, rgba(7, 10, 19, 0.5) 0px, var(--bg-primary) 100%);
   color: var(--text-primary);
   font-family: var(--font-body);
+  font-size: 16px; /* Base size */
   min-height: 100vh;
   overflow-x: hidden;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -81,8 +82,8 @@ body {
 /* Typographical Utilities */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.025em;
+  font-weight: 700; /* Extra bold headings */
+  letter-spacing: -0.02em;
   color: var(--text-primary);
 }
 
@@ -94,11 +95,11 @@ a {
 /* Glassmorphic Panel Layouts */
 .glass-panel {
   background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px); /* Increased blur */
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-md);
-  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  box-shadow: 0 12px 40px 0 var(--glass-shadow);
   transition: var(--transition-smooth);
 }
 
@@ -119,12 +120,12 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 10px 20px;
+  gap: 10px;
+  padding: 12px 24px; /* Larger padding for usability */
   border-radius: var(--border-radius-sm);
   font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600; /* Bolder font */
+  font-size: 1.05rem; /* Larger font */
   border: 1px solid transparent;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -132,90 +133,91 @@ a {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-purple), #5e11c2);
+  background: linear-gradient(135deg, var(--accent-purple), #7b2cbf);
   color: var(--text-primary);
-  box-shadow: 0 4px 14px 0 rgba(138, 43, 226, 0.4);
+  box-shadow: 0 4px 16px 0 rgba(157, 78, 221, 0.4);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(138, 43, 226, 0.6);
-  background: linear-gradient(135deg, #9940ff, var(--accent-purple));
+  box-shadow: 0 6px 24px 0 rgba(157, 78, 221, 0.6);
+  background: linear-gradient(135deg, #b5179e, var(--accent-purple));
 }
 
 .btn-secondary {
-  background: var(--glass-bg);
+  background: rgba(13, 18, 34, 0.8);
   color: var(--text-primary);
   border: 1px solid var(--glass-border);
 }
 .btn-secondary:hover {
   background: var(--glass-bg-hover);
-  border-color: var(--glass-border-hover);
+  border-color: var(--accent-cyan);
   color: var(--accent-cyan);
+  box-shadow: 0 0 12px 0 var(--accent-cyan-glow);
 }
 
 .btn-cyan {
   background: linear-gradient(135deg, var(--accent-cyan), #00b4fe);
   color: #040914;
-  box-shadow: 0 4px 14px 0 rgba(0, 242, 254, 0.35);
-  font-weight: 600;
+  box-shadow: 0 4px 16px 0 rgba(0, 242, 254, 0.4);
+  font-weight: 700;
 }
 .btn-cyan:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(0, 242, 254, 0.55);
+  box-shadow: 0 6px 24px 0 rgba(0, 242, 254, 0.6);
 }
 
 .btn-danger {
-  background: rgba(239, 68, 68, 0.15);
-  color: #fca5a5;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.2);
+  color: #fecaca;
+  border: 1px solid rgba(239, 68, 68, 0.4);
 }
 .btn-danger:hover {
   background: var(--accent-red);
   color: var(--text-primary);
-  box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.4);
+  box-shadow: 0 4px 16px 0 rgba(239, 68, 68, 0.5);
 }
 
 .btn-icon {
-  width: 36px;
-  height: 36px;
+  width: 42px; /* Scaled up from 36px */
+  height: 42px;
   padding: 0;
   border-radius: 50%;
 }
 
 /* Glass Form Inputs */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .form-label {
   font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.95rem; /* Larger from 0.85rem */
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  color: var(--accent-cyan); /* High visibility cyan label */
 }
 
 .form-input {
   width: 100%;
-  padding: 12px 16px;
-  background: rgba(7, 10, 19, 0.4);
-  border: 1px solid var(--glass-border);
+  padding: 14px 18px; /* Scaled up */
+  background: rgba(4, 7, 16, 0.7); /* Darker and more solid background */
+  border: 1px solid rgba(255, 255, 255, 0.16); /* Brighter border */
   border-radius: var(--border-radius-sm);
-  color: var(--text-primary);
+  color: #ffffff; /* Pure white text inside inputs */
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1.05rem; /* Larger font */
   transition: var(--transition-smooth);
 }
 
 .form-input:focus {
   outline: none;
   border-color: var(--accent-cyan);
-  background: rgba(7, 10, 19, 0.7);
-  box-shadow: 0 0 10px 0 var(--accent-cyan-glow);
+  background: rgba(4, 7, 16, 0.9);
+  box-shadow: 0 0 12px 0 var(--accent-cyan-glow);
 }
 
 .form-input::placeholder {
@@ -227,43 +229,43 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 10px;
+  padding: 6px 12px; /* Scaled up */
   border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-size: 0.85rem; /* Larger font */
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .badge-todo {
-  background: rgba(245, 158, 11, 0.12);
+  background: rgba(245, 158, 11, 0.15);
   color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.25);
+  border: 1px solid rgba(245, 158, 11, 0.35);
 }
 .badge-progress {
-  background: rgba(0, 242, 254, 0.1);
+  background: rgba(0, 242, 254, 0.15);
   color: var(--accent-cyan);
-  border: 1px solid rgba(0, 242, 254, 0.25);
+  border: 1px solid rgba(0, 242, 254, 0.35);
 }
 .badge-completed {
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(16, 185, 129, 0.15);
   color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 .badge-high {
-  background: rgba(239, 68, 68, 0.15);
+  background: rgba(239, 68, 68, 0.2);
   color: #fca5a5;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  border: 1px solid rgba(239, 68, 68, 0.4);
 }
 .badge-medium {
-  background: rgba(245, 158, 11, 0.12);
+  background: rgba(245, 158, 11, 0.15);
   color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.25);
+  border: 1px solid rgba(245, 158, 11, 0.35);
 }
 .badge-low {
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(16, 185, 129, 0.15);
   color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 /* Custom UI Grid Layouts */
@@ -410,3 +412,349 @@ a {
 .toast-error {
   border-left-color: var(--accent-red);
 }
+
+/* ==========================================================================
+   LEGIBILITY & HIGH CONTRAST ACCESSIBILITY OVERRIDES
+   ========================================================================== */
+
+/* Enlarge Base Typography across entire app */
+body {
+  font-size: 18px !important;
+}
+
+/* Sidebar Container layout resizing */
+.sidebar-container {
+  width: 300px !important;
+  padding: 30px 20px !important;
+}
+
+/* Sidebar Header text and spacing */
+.sidebar-container h1 {
+  font-size: 1.6rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+/* Logo Sub-label spacing and clarity */
+.sidebar-container span[style*="letterSpacing"] {
+  font-size: 0.85rem !important;
+  font-weight: 750 !important;
+  color: var(--accent-cyan) !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* Workspace Navigation Label text */
+.sidebar-container span[style*="textTransform"] {
+  font-size: 0.95rem !important;
+  font-weight: 750 !important;
+  color: var(--accent-cyan) !important;
+  letter-spacing: 0.08em !important;
+  margin-top: 10px !important;
+}
+
+/* Workspace List Item buttons inside sidebar */
+.sidebar-container button.glass-panel {
+  padding: 14px 18px !important;
+  margin-top: 8px !important;
+  border-radius: var(--border-radius-sm) !important;
+}
+
+.sidebar-container button.glass-panel span {
+  font-size: 1.15rem !important; /* Significantly larger workspace names */
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+/* User Profile card text & badge inside sidebar */
+.sidebar-container div[style*="fontSize: '0.85rem'"] {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+.sidebar-container .badge {
+  font-size: 0.85rem !important;
+  padding: 4px 8px !important;
+  font-weight: 800 !important;
+}
+
+.sidebar-container .badge-progress {
+  background: rgba(0, 242, 254, 0.25) !important;
+  color: var(--accent-cyan) !important;
+  border: 1px solid rgba(0, 242, 254, 0.5) !important;
+}
+
+.sidebar-container .badge-todo {
+  background: rgba(245, 158, 11, 0.25) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.5) !important;
+}
+
+/* Navigation button (Dashboard button) inside sidebar */
+.sidebar-container button.btn {
+  padding: 14px 18px !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+
+.sidebar-container button.btn span {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+
+/* Main Workspace layout padding and spacing */
+.main-content {
+  margin-left: 300px !important;
+  padding: 40px !important;
+}
+
+@media (max-width: 991px) {
+  .main-content {
+    margin-left: 0 !important;
+    padding: 24px !important;
+    padding-top: 90px !important;
+  }
+}
+
+/* Dashboard Welcoming Titles visibility */
+.main-content h2.gradient-text-cyan {
+  font-size: 2.6rem !important;
+  font-weight: 850 !important;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+}
+
+.main-content p[style*="color: 'var(--text-secondary)'"] {
+  font-size: 1.25rem !important;
+  color: #ffffff !important; /* White for max readability */
+  font-weight: 500 !important;
+  opacity: 0.95;
+}
+
+/* KPI Card upgrades - bold numbers, clear labels */
+.glass-panel span[style*="fontSize: '0.9rem'"],
+.glass-panel span {
+  font-size: 1.15rem !important; /* Enlarge labels */
+  font-weight: 700 !important;
+  color: #f8fafc !important; /* Bright silver white */
+}
+
+.glass-panel h3 {
+  font-size: 3.4rem !important; /* Huge prominent numbers */
+  font-weight: 900 !important;
+  margin-top: 6px !important;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Target color specifics for each metric number to look absolutely premium */
+.glass-panel:nth-child(1) h3 {
+  color: var(--accent-cyan) !important;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.3) !important;
+}
+.glass-panel:nth-child(2) h3 {
+  color: var(--accent-purple) !important;
+  text-shadow: 0 0 20px rgba(157, 78, 221, 0.3) !important;
+}
+.glass-panel:nth-child(3) h3 {
+  color: var(--accent-green) !important;
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.3) !important;
+}
+.glass-panel:nth-child(4) h3 {
+  color: #ff6b6b !important;
+  text-shadow: 0 0 20px rgba(255, 107, 107, 0.3) !important;
+}
+
+/* Milestone lists and sub-panels readability */
+.glass-panel h4 {
+  font-size: 1.3rem !important; /* Large bold card titles */
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+.glass-panel p[style*="color: 'var(--text-secondary)'"] {
+  font-size: 1.1rem !important;
+  color: #e2e8f0 !important;
+  line-height: 1.6 !important;
+}
+
+/* Target dates & details on milestones */
+.glass-panel div[style*="fontSize: '0.8rem'"] {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #cbd5e1 !important;
+}
+
+.glass-panel div[style*="fontSize: '0.9rem'"] {
+  font-size: 1.2rem !important;
+  font-weight: 750 !important;
+  color: var(--accent-cyan) !important;
+}
+
+/* Custom Badge text sizes */
+.badge {
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+  padding: 5px 12px !important;
+}
+
+/* Launch New Project Form Input upgrades */
+.form-label {
+  font-size: 1.15rem !important;
+  font-weight: 750 !important;
+  color: var(--accent-cyan) !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 6px !important;
+}
+
+.form-input {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  padding: 16px 20px !important;
+  background: rgba(4, 7, 16, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  border-radius: var(--border-radius-sm) !important;
+}
+
+.form-input:focus {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 15px var(--accent-cyan-glow) !important;
+}
+
+.form-input::placeholder {
+  color: #cbd5e1 !important;
+}
+
+/* Initialize Workspace / Submit buttons */
+button.btn-primary {
+  padding: 16px 28px !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+}
+
+/* Work Completion progress gauge text */
+span[style*="fontSize: '1.8rem'"] {
+  font-size: 2.3rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+}
+
+span[style*="fontSize: '0.75rem'"] {
+  font-size: 0.95rem !important;
+  font-weight: 750 !important;
+  color: var(--text-secondary) !important;
+  letter-spacing: 0.05em !important;
+}
+
+div[style*="fontSize: '0.8rem'"] {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  color: #cbd5e1 !important;
+}
+
+div[style*="fontSize: '1.2rem'"] {
+  font-size: 1.45rem !important;
+  font-weight: 800 !important;
+}
+
+/* Kanban Board Column Headers & Elements */
+.kanban-header span {
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+.kanban-header .badge {
+  font-size: 1rem !important;
+  padding: 4px 12px !important;
+}
+
+.kanban-column {
+  padding: 20px !important;
+}
+
+/* Kanban Cards Text Sizes */
+.kanban-card-list .glass-panel h4 {
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+}
+
+.kanban-card-list .glass-panel p {
+  font-size: 1.05rem !important;
+  color: #cbd5e1 !important;
+  white-space: normal !important; /* Allow wrapping so they can read full description */
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.kanban-card-list .glass-panel span {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+}
+
+/* Overdue Deliverables Warning box inside Dashboard */
+.glass-panel h4[style*="color: '#fca5a5'"] {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  color: #fecaca !important;
+}
+
+.glass-panel p[style*="fontSize: '0.85rem'"] {
+  font-size: 1.1rem !important;
+  color: #fbcfe8 !important;
+}
+
+/* Login/Register screen text sizes */
+.glass-panel h1[style*="fontSize: '2rem'"] {
+  font-size: 2.8rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.glass-panel p[style*="fontSize: '0.9rem'"] {
+  font-size: 1.2rem !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Developer demo credentials header & buttons */
+div[style*="fontSize: '0.8rem'"] {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+}
+
+button[style*="fontSize: '0.75rem'"] {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 10px 14px !important;
+}
+
+/* Modals inputs & dropdowns enlargement */
+.modal-content h3 {
+  font-size: 1.7rem !important;
+  font-weight: 850 !important;
+  color: #ffffff !important;
+}
+
+.modal-content select.form-input {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+.modal-content option {
+  background: var(--bg-tertiary) !important;
+  color: #ffffff !important;
+  font-size: 1.2rem !important;
+}
+
+/* Custom Scrollbars thumb visibility enhancement */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.28) !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
