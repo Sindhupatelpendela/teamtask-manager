@@ -135,7 +135,7 @@ const WorkspaceLayout = () => {
 
       {/* Glass Sidebar */}
       <aside className="sidebar-container" style={{
-        width: '420px',
+        width: '650px',
         background: 'var(--bg-secondary)',
         borderRight: '1px solid var(--glass-border)',
         height: '100vh',
@@ -144,46 +144,46 @@ const WorkspaceLayout = () => {
         left: 0,
         display: 'flex',
         flexDirection: 'column',
-        padding: '30px 24px',
+        padding: '36px 30px',
         justifyContent: 'space-between',
         transition: 'var(--transition-smooth)'
       }}>
         
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', overflowY: 'auto', flex: 1, paddingRight: '4px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '35px', overflowY: 'auto', flex: 1, paddingRight: '4px' }}>
           
           {/* Logo / Brand Header */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              width: '56px',
-              height: '56px',
-              borderRadius: '14px',
+              width: '96px',
+              height: '96px',
+              borderRadius: '24px',
               background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))',
-              boxShadow: '0 4px 16px rgba(0, 242, 254, 0.25)',
+              boxShadow: '0 6px 20px rgba(0, 242, 254, 0.3)',
               flexShrink: 0
             }}>
-              <Layers size={28} color="#070a13" strokeWidth={2.5} />
+              <Layers size={52} color="#070a13" strokeWidth={2.5} />
             </div>
             <div>
-              <h1 style={{ fontSize: '2.4rem', fontWeight: 900, fontFamily: 'var(--font-display)', lineHeight: '1.1', color: '#ffffff' }}>TeamTask</h1>
-              <span style={{ fontSize: '0.9rem', color: 'var(--accent-cyan)', textTransform: 'uppercase', letterSpacing: '0.12em', fontWeight: 800 }}>COLLABORATION</span>
+              <h1 style={{ fontSize: '4.0rem', fontWeight: 950, fontFamily: 'var(--font-display)', lineHeight: '1.05', color: '#ffffff' }}>TeamTask</h1>
+              <span style={{ fontSize: '1.4rem', color: 'var(--accent-cyan)', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 900 }}>COLLABORATION</span>
             </div>
           </div>
 
           {/* User Profile Card */}
           <div className="glass-panel" style={{
-            padding: '16px 20px',
+            padding: '24px 30px',
             display: 'flex',
             alignItems: 'center',
-            gap: '16px',
+            gap: '24px',
             background: 'rgba(255,255,255,0.01)',
             border: '1px solid rgba(255,255,255,0.04)'
           }}>
             <div style={{
-              width: '48px',
-              height: '48px',
+              width: '80px',
+              height: '80px',
               borderRadius: '50%',
               backgroundColor: 'var(--accent-purple)',
               display: 'flex',
@@ -191,15 +191,15 @@ const WorkspaceLayout = () => {
               justifyContent: 'center',
               fontFamily: 'var(--font-display)',
               fontWeight: 800,
-              fontSize: '1.25rem',
+              fontSize: '2.2rem',
               flexShrink: 0
             }}>
               {getInitials(user?.name)}
             </div>
             <div style={{ overflow: 'hidden', flex: 1 }}>
-              <div style={{ fontSize: '1.25rem', fontWeight: 800, textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', color: '#ffffff' }}>{user?.name}</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '4px' }}>
-                <span className={`badge ${user?.role === 'Admin' ? 'badge-progress' : 'badge-todo'}`} style={{ fontSize: '0.8rem', padding: '3px 10px', fontWeight: 800 }}>
+              <div style={{ fontSize: '2.2rem', fontWeight: 900, textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', color: '#ffffff' }}>{user?.name}</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '8px' }}>
+                <span className={`badge ${user?.role === 'Admin' ? 'badge-progress' : 'badge-todo'}`} style={{ fontSize: '1.4rem', padding: '6px 16px', fontWeight: 800 }}>
                   {user?.role}
                 </span>
               </div>
@@ -207,13 +207,13 @@ const WorkspaceLayout = () => {
           </div>
 
           {/* Navigation Links */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <button
               onClick={handleNavigateToDashboard}
               className={`btn ${activeView === 'dashboard' ? 'btn-primary' : 'btn-secondary'}`}
-              style={{ justifyContent: 'flex-start', padding: '16px 20px', fontSize: '1.35rem', fontWeight: 800 }}
+              style={{ justifyContent: 'flex-start', padding: '24px 30px', fontSize: '2.2rem', fontWeight: 800 }}
             >
-              <LayoutDashboard size={20} />
+              <LayoutDashboard size={36} />
               <span>Dashboard</span>
             </button>
           </div>
@@ -225,12 +225,12 @@ const WorkspaceLayout = () => {
               justifyContent: 'space-between',
               alignItems: 'center',
               padding: '0 8px',
-              marginBottom: '12px'
+              marginBottom: '16px'
             }}>
               <span style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: '1.1rem',
-                fontWeight: 800,
+                fontSize: '1.8rem',
+                fontWeight: 900,
                 color: 'var(--accent-cyan)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em'
@@ -245,17 +245,17 @@ const WorkspaceLayout = () => {
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  padding: '4px'
+                  padding: '6px'
                 }}
                 title="Create project"
               >
-                <FolderPlus size={18} />
+                <FolderPlus size={32} />
               </button>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {projects.length === 0 ? (
-                <div style={{ padding: '12px 8px', fontSize: '1.0rem', color: 'var(--text-muted)' }}>
+                <div style={{ padding: '12px 8px', fontSize: '1.5rem', color: 'var(--text-muted)' }}>
                   No workspaces joined.
                 </div>
               ) : (
@@ -267,19 +267,19 @@ const WorkspaceLayout = () => {
                       onClick={() => handleNavigateToProject(p.id)}
                       className="glass-panel"
                       style={{
-                        padding: '16px 20px',
+                        padding: '24px 30px',
                         textAlign: 'left',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        fontSize: '1.3rem',
-                        fontWeight: isActive ? 800 : 600,
+                        fontSize: '2.1rem',
+                        fontWeight: isActive ? 900 : 700,
                         border: isActive ? '1px solid var(--accent-cyan)' : '1px solid transparent',
                         background: isActive ? 'rgba(0, 242, 254, 0.05)' : 'rgba(255, 255, 255, 0.01)',
                         cursor: 'pointer',
                         width: '100%',
                         transition: 'var(--transition-smooth)',
-                        marginTop: '10px'
+                        marginTop: '12px'
                       }}
                     >
                       <span style={{ 
@@ -297,7 +297,7 @@ const WorkspaceLayout = () => {
                       }}>
                         {p.name}
                       </span>
-                      {isActive && <ChevronRight size={16} color="var(--accent-cyan)" style={{ flexShrink: 0 }} />}
+                      {isActive && <ChevronRight size={28} color="var(--accent-cyan)" style={{ flexShrink: 0 }} />}
                     </button>
                   );
                 })
@@ -311,9 +311,9 @@ const WorkspaceLayout = () => {
         <button
           onClick={logout}
           className="btn btn-danger"
-          style={{ width: '100%', justifyContent: 'flex-start', padding: '10px 14px', border: '1px solid transparent' }}
+          style={{ width: '100%', justifyContent: 'flex-start', padding: '24px 30px', fontSize: '2.1rem', fontWeight: 800, border: '1px solid transparent' }}
         >
-          <LogOut size={16} />
+          <LogOut size={30} />
           <span>Exit Workspace</span>
         </button>
 

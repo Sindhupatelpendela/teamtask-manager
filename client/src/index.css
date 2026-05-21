@@ -419,53 +419,53 @@ a {
 
 /* Enlarge Base Typography across entire app to super-sized levels */
 body {
-  font-size: 22px !important;
+  font-size: 26px !important;
 }
 
 /* Sidebar Container layout resizing */
 .sidebar-container {
-  width: 420px !important;
-  padding: 30px 24px !important;
+  width: 650px !important;
+  padding: 36px 30px !important;
   box-shadow: 6px 0 30px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Sidebar Header text and spacing */
 .sidebar-container h1 {
-  font-size: 2.4rem !important;
-  font-weight: 900 !important;
+  font-size: 4.0rem !important;
+  font-weight: 950 !important;
   color: #ffffff !important;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.2) !important;
-  line-height: 1.1 !important;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.25) !important;
+  line-height: 1.05 !important;
   margin: 0 !important;
 }
 
 /* Logo Sub-label spacing and clarity */
 .sidebar-container span[style*="letterSpacing"] {
-  font-size: 0.95rem !important;
-  font-weight: 800 !important;
+  font-size: 1.4rem !important;
+  font-weight: 900 !important;
   color: var(--accent-cyan) !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.15em !important;
 }
 
 /* Workspace Navigation Label text */
 .sidebar-container span[style*="textTransform"] {
-  font-size: 1.25rem !important;
-  font-weight: 800 !important;
+  font-size: 1.8rem !important;
+  font-weight: 900 !important;
   color: var(--accent-cyan) !important;
   letter-spacing: 0.08em !important;
-  margin-top: 12px !important;
+  margin-top: 16px !important;
 }
 
 /* Workspace List Item buttons inside sidebar */
 .sidebar-container button.glass-panel {
-  padding: 16px 20px !important;
-  margin-top: 10px !important;
+  padding: 24px 30px !important;
+  margin-top: 12px !important;
   border-radius: var(--border-radius-sm) !important;
 }
 
 .sidebar-container button.glass-panel span {
-  font-size: 1.35rem !important; /* Extremely prominent workspace names */
-  font-weight: 800 !important;
+  font-size: 2.1rem !important; /* Extremely prominent workspace names */
+  font-weight: 900 !important;
   color: #ffffff !important;
   white-space: normal !important;
   display: -webkit-box !important;
@@ -480,15 +480,15 @@ body {
 
 /* User Profile card text & badge inside sidebar */
 .sidebar-container div[style*="fontSize: '0.85rem'"] {
-  font-size: 1.25rem !important;
-  font-weight: 800 !important;
+  font-size: 2.2rem !important;
+  font-weight: 900 !important;
   color: #ffffff !important;
 }
 
 .sidebar-container .badge {
-  font-size: 0.95rem !important;
-  padding: 6px 12px !important;
-  font-weight: 800 !important;
+  font-size: 1.4rem !important;
+  padding: 6px 16px !important;
+  font-weight: 850 !important;
 }
 
 .sidebar-container .badge-progress {
@@ -505,20 +505,20 @@ body {
 
 /* Navigation button (Dashboard button) inside sidebar */
 .sidebar-container button.btn {
-  padding: 16px 20px !important;
-  font-size: 1.35rem !important;
-  font-weight: 800 !important;
+  padding: 24px 30px !important;
+  font-size: 2.2rem !important;
+  font-weight: 900 !important;
 }
 
 .sidebar-container button.btn span {
-  font-size: 1.35rem !important;
-  font-weight: 800 !important;
+  font-size: 2.2rem !important;
+  font-weight: 900 !important;
 }
 
 /* Main Workspace layout padding and spacing */
 .main-content {
-  margin-left: 420px !important;
-  padding: 45px !important;
+  margin-left: 650px !important;
+  padding: 50px !important;
 }
 
 @media (max-width: 991px) {
